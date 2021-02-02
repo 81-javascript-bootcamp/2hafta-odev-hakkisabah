@@ -23,7 +23,7 @@ myCarDetails();
 *
 * İlk önce string kontrol edilmeli eğer edilmez ise gönderilen sayı tipindeki argüman,
 * boşluk kontrolü yapılan name parametresinde hata verecektir.
-* Son olarak fonksiyonun istenen çıktıyı verdiğini gösteren 5 adet console.log() kullanımı hazırlanmıştır.
+* Son olarak fonksiyonun istenen çıktıyı verdiğini gösteren 6 adet console.log() kullanımı hazırlanmıştır.
 * */
 function isValidName(name) {
     return typeof name == "string" && name.replaceAll(" ", "").length >= 2
@@ -31,6 +31,7 @@ function isValidName(name) {
         : false;
 }
 console.log(isValidName("Hakki")); // true
+console.log(isValidName()); // false
 console.log(isValidName("")); // false
 console.log(isValidName(" ")); // false
 console.log(isValidName("  ")); // false
