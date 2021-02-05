@@ -1,0 +1,32 @@
+{
+  "name": "2hafta-odev-hakkisabah",
+  "version": "1.0.0",
+  "description": "Izmir Atolye 15 JavaScript Bootcamp",
+  "main": "odev.test.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/81-javascript-bootcamp/2hafta-odev-hakkisabah.git"
+  },
+  "keywords": [
+    "Hafta",
+    "2",
+    "Odev",
+    "Kodluyoruz",
+    "Izmir",
+    "JavaScript",
+    "Bootcamp"
+  ],
+  "author": "Hakki Sabah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/81-javascript-bootcamp/2hafta-odev-hakkisabah/issues"
+  },
+  "homepage": "https://github.com/81-javascript-bootcamp/2hafta-odev-hakkisabah#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

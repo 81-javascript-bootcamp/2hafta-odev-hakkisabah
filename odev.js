@@ -27,7 +27,7 @@ myCarDetails();
  * */
 function isValidName(name) {
   //ilk string kontrolü
-  if (typeof name != "string") {
+  if (typeof name != "string" || !name) {
     return false;
   }
   // ifadenin başındaki ve sonundaki boşluklar temizlenir, bunun sebebi aşağıdaki koşulların sağlıklı çalışması içindir.
@@ -44,32 +44,12 @@ function isValidName(name) {
       if (splittedName[i].length < 2) {
         // koşula uymayan durumda false değeri döndürülür ve break ile döngüden çıkılır.
         return false;
-        break;
       }
     }
+    // Tüm koşullar haricinde beklenen değer.
+    return true;
   }
-  // test koşullarına eklenen, tab ve enter klavye girişleri tespit edildikten ve döngüye girmeyen ifadeler için
-  return name.replaceAll("\t\n", "").length > 1 ? true : false;
 }
-console.log(isValidName() === false);
-console.log(isValidName("Ahmet") === true);
-console.log(isValidName(false) === false);
-console.log(isValidName(null) === false);
-console.log(isValidName(undefined) === false);
-console.log(isValidName("") === false);
-console.log(isValidName("  \t\n") === false);
-console.log(isValidName("X") === false);
-console.log(isValidName("Ha") === true);
-console.log(isValidName("Ha Sa") === true);
-console.log(isValidName("Ha Sa Ba") === true);
-console.log(isValidName("Hakki Sabah Sabah \t\n") === true);
-console.log(isValidName("Hakki Sabah Sabah ") === true);
-console.log(isValidName("Hakki Sabah Sabah Sa") === false);
-console.log(isValidName("Hakki Sabah Sabah S") === false);
-console.log(isValidName("Hakki Sabah S") === false);
-console.log(isValidName("H S S") === false);
-console.log(isValidName("H S") === false);
-console.log(isValidName("H ") === false);
 
 // Cevap 3
 /* Hakkı Sabah 02.02.2021
@@ -86,3 +66,5 @@ function summary(genre, year) {
   );
 }
 summary.call(book, "dystopian", "1932");
+
+module.exports = isValidName;
